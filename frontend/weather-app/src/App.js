@@ -1,19 +1,49 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-// const API_KEY = '6b0b2b1fdeaac76e4a7282c66648c288';
+
 const API_URL = 'http://localhost:3000/weather';
 
 function App() {
   const [location, setLocation] = useState('');
   const [weatherData, setWeatherData] = useState(null);
 
+  useEffect(() => {
+    // Fetch user's current location on page load
+    if ('geolocation' in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        async (position) => {
+          try {
+            const { latitude, longitude } = position.coords;
+            const response = await axios.get(API_URL, {
+              params: {
+                lat: latitude,
+                lon: longitude,
+              },
+            });
+            setWeatherData(response.data);
+          } catch (error) {
+            console.error('Error fetching weather data in react:', error);
+            setWeatherData(null);
+          }
+        },
+        (error) => {
+          console.error('Error getting geolocation:', error);
+          setWeatherData(null);
+        }
+      );
+    } else {
+      console.error('Geolocation is not available in your browser');
+      setWeatherData(null);
+    }
+  }, []);
+
+
   const handleSearch = async () => {
     try {
       const response = await axios.get(API_URL, {
         params: {
           q: location,
-          // appid: API_KEY,
         },
       });
       setWeatherData(response.data);

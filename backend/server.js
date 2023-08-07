@@ -11,16 +11,14 @@ app.use(cors());
 
 app.get('/weather', async (req, res) => {
   const { q } = req.query;
-
-  //check for location in serach box
-  if (!q) {
-    return res.status(400).json({ error: 'Location parameter is missing' });
-  }
+  const { lat, lon } = req.query;
 
   try {
     const response = await axios.get(API_URL, {
       params: {
         q: q,
+        lat : lat,
+        lon : lon,
         appid: API_KEY,
         units: 'metric',
       },
@@ -28,7 +26,7 @@ app.get('/weather', async (req, res) => {
     res.json(response.data);
   } catch (error) {
     console.error('Error fetching weather data:', error);
-    res.status(500).json({ error: 'Error fetching weather data' });
+    res.status(500).json({ error: 'Error fetching weather data at server' });
   }
 });
 
