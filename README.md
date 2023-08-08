@@ -58,28 +58,33 @@ To get started with WeatherApp, follow the steps below:
    npm install
 
 
-
-
-
 ## Usage
 
 1. Obtain an API key from OpenWeatherMap by signing up on their website.
 2. In the backend/server.js file, replace 'YOUR_OPENWEATHERMAP_API_KEY' with your API key.
 3. Start the frontend and backend servers:
    ```bash
-  # Start the frontend server
+  ### Start the frontend server
     cd frontend
     npm start
 
-  # Start the backend server
+  ### Start the backend server
     cd backend
     node server.js
 4. Open your browser and navigate to http://localhost:3000 or at which your frontend server is running to access the WeatherApp UI.
 5. You will see the UI:
 
 
+<img width="1552" alt="Screenshot 2023-08-09 at 12 17 03 AM" src="https://github.com/sagarchauhan015/sky-cast/assets/87389952/f6a2a7a5-fe0c-4cf8-94b7-ba302fb908f3">
 
 
+<img width="1552" alt="Screenshot 2023-08-09 at 12 18 03 AM" src="https://github.com/sagarchauhan015/sky-cast/assets/87389952/f524b1ae-8113-4697-b35d-32b04aff8bf4">
+
+
+<img width="1552" alt="Screenshot 2023-08-09 at 12 18 37 AM" src="https://github.com/sagarchauhan015/sky-cast/assets/87389952/3077acc1-16bb-4796-b0cc-37f779342f93">
+
+
+<img width="1552" alt="Screenshot 2023-08-09 at 12 18 46 AM" src="https://github.com/sagarchauhan015/sky-cast/assets/87389952/9afccbe5-7ca2-49ed-ae47-e6f6a0b28e00">
 
    
 ## Contributing
