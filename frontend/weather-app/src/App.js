@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+import Header from './components/Header/Header';
+import Temperature from './components/Temperature/Temperature';
+import WeatherDetails from './components/WeatherDetails/WeatherDetails';
+
 
 const API_URL = 'http://localhost:3000/weather';
 
@@ -21,6 +25,7 @@ function App() {
                 lon: longitude,
               },
             });
+            console.log(response.data);
             setWeatherData(response.data);
           } catch (error) {
             console.error('Error fetching weather data in react:', error);
@@ -55,21 +60,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Weather App</h1>
-      <input
-        type="text"
-        value={location}
-        onChange={(e) => setLocation(e.target.value)}
-        placeholder="Enter location..."
-      />
-      <button onClick={handleSearch}>Search</button>
-      {weatherData && (
-        <div>
-          <h2>{weatherData.name}</h2>
-          <p>Temperature: {weatherData.main.temp}°C</p>
-          <p>Humidity: {weatherData.main.humidity}%</p>
-        </div>
-      )}
+      <Header location = {location} onChange = {(e) => setLocation(e.target.value)} onClick={handleSearch} />
+      {weatherData && (<Temperature tempData = {weatherData.main} weatherData = {weatherData} />)}
+      {weatherData && (<WeatherDetails weathData = {weatherData} />)}
     </div>
   );
 }
