@@ -21,6 +21,10 @@
     color: white;
     font-weight: 600;
 }
+.temp-city > p:nth-child(2){
+    font-size: 22px;
+    font-weight: 400;
+}
 .temp-deg{
     display: flex;
     justify-content: space-between;
@@ -53,4 +57,27 @@
 }
 .temp-deg-right > p > span:nth-child(2){
     margin-left: 30px;
+}
+@media (min-width: 300px) and (max-width: 700px) {
+    .temp-container{
+        width: 90%;
+    }
+    .temp-deg{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .temp-container{
+        height: max-content;
+    }
+    .temp-deg-left{
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .temp-deg-right{
+        text-align: center;
+    }
+    .temp-deg-right > p > span:nth-child(2){
+        margin-left: 10px;
+    }
 }

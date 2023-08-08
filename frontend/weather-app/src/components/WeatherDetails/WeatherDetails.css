@@ -36,3 +36,13 @@
     font-size: 13px;
     font-weight: 800;
 }
+@media (min-width: 300px) and (max-width: 800px) {
+    .details-container{
+        flex-direction: column;
+    }
+    .details-box{
+        width: 100%;
+        margin-bottom: 30px;
+        padding: 10px 20px;
+    }
+}
