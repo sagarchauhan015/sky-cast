@@ -68,6 +68,7 @@ To get started with WeatherApp, follow the steps below:
    ```bash
     cd frontend
     npm start
+   ```
 
    ### Start the backend server:
 
