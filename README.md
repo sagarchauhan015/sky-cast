@@ -42,13 +42,13 @@ To get started with WeatherApp, follow the steps below:
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/sagarchauhan015/WeatherApp.git
-   cd WeatherApp
+   git clone https://github.com/sagarchauhan015/sky-cast.git
+   cd frontend
    
 2. Install frontend dependencies:
    [you can get all the dependencies in package.json]
    ```bash
-   cd frontend
+   cd weather-app
    npm install
    
 3. Install backend dependencies:
@@ -63,12 +63,13 @@ To get started with WeatherApp, follow the steps below:
 1. Obtain an API key from OpenWeatherMap by signing up on their website.
 2. In the backend/server.js file, replace 'YOUR_OPENWEATHERMAP_API_KEY' with your API key.
 3. Start the frontend and backend servers:
-   ```bash
   ### Start the frontend server
+   ```bash
     cd frontend
     npm start
 
   ### Start the backend server
+   ```bash
     cd backend
     node server.js
 4. Open your browser and navigate to http://localhost:3000 or at which your frontend server is running to access the WeatherApp UI.
@@ -93,4 +94,4 @@ Contributions are welcome! If you find a bug or have suggestions for improvement
 
 
 
-## MIT License
+### MIT License
