@@ -63,12 +63,11 @@ To get started with WeatherApp, follow the steps below:
 1. Obtain an API key from OpenWeatherMap by signing up on their website.
 2. In the backend/server.js file, replace 'YOUR_OPENWEATHERMAP_API_KEY' with your API key.
 3. Start the frontend and backend servers:
-  ### Start the frontend server
-   ```bash
+   ### Start the frontend server
     cd frontend
     npm start
 
-  ### Start the backend server
+   ### Start the backend server
     cd backend
     node server.js
 4. Open your browser and navigate to http://localhost:3000 or at which your frontend server is running to access the WeatherApp UI.
