@@ -69,7 +69,6 @@ To get started with WeatherApp, follow the steps below:
     npm start
 
   ### Start the backend server
-   ```bash
     cd backend
     node server.js
 4. Open your browser and navigate to http://localhost:3000 or at which your frontend server is running to access the WeatherApp UI.
